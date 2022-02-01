@@ -32,7 +32,7 @@ The mobile design VS My mobile solution<br>
 
 ### Links
 
-- Solution URL: [FrontEnd Mentor: My Solution](#)
+- Solution URL: [FrontEnd Mentor: My Solution](https://www.frontendmentor.io/solutions/rotating-qr-card-component-TYJpErvy9)
 - Live Site URL: [GitHub Page: QR Card Component](https://anoshaahmed.github.io/fem14-qr-code-card/)
 
 ## My process
@@ -46,7 +46,7 @@ The mobile design VS My mobile solution<br>
 
 ### What I learned
 
-I learned to make a rotating card.
+I learned to make a rotating component.
 
 ### Continued development
 
