@@ -1,0 +1,97 @@
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-gray: hsl(212, 45%, 89%);
+    --clr-grayish-blue: hsl(220, 15%, 55%);
+    --clr-dark-blue: hsl(218, 44%, 22%);
+    --clr-blue: #2c7dfa;
+    
+    --fw--normal: 400;
+    --fw--bold: 700;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    background-color: var(--clr-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.img {
+    width: 100%;
+    border-radius: 1rem;
+}
+.h2 {
+    font-weight: var(--fw--bold);
+    color: var(--clr-dark-blue);
+    margin: 1.7rem 0 1.4rem;
+    letter-spacing: -0.15px;
+    line-height: 1.3;
+}
+.p {
+    font-weight: var(--fw--normal);
+    color: var(--clr-grayish-blue);
+    max-width: 26rem;
+    letter-spacing: 0.2px;
+}
+.a {
+    display: inline-block;
+    color: var(--clr-white);
+    text-decoration: none;
+}
+.card {
+    width: 32rem;
+    height: 49.7rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+}
+.card__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem;
+    width: 32rem;
+    height: 49.7rem;
+    transition: all 1s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 1px 25px 35px -2px hsla(220, 15%, 55%,0.2);
+    backface-visibility: hidden;
+}
+.card__side--front {
+    background-color: var(--clr-white);
+}
+.card__side--back {
+    background: linear-gradient(
+        to right bottom,
+        #2a446f,
+        var(--clr-dark-blue)
+    );
+    justify-content: center;
+    transform: rotateY(180deg);
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--clr-white);
+    text-shadow: 1px 1px var(--clr-dark-blue), -1px -1px var(--clr-grayish-blue);
+    line-height: 2;
+}
+.card:hover .card__side--front { transform: rotateY(-180deg);}
+.card:hover .card__side--back { transform: rotateY(0deg);}
