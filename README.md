@@ -33,7 +33,7 @@ The mobile design VS My mobile solution<br>
 ### Links
 
 - Solution URL: [FrontEnd Mentor: My Solution](#)
-- Live Site URL: [GitHub Page: #](#)
+- Live Site URL: [GitHub Page: QR Card Component](https://anoshaahmed.github.io/fem14-qr-code-card/)
 
 ## My process
 
