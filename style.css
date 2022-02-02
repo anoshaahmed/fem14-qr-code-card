@@ -83,19 +83,31 @@ body {
         to right bottom,
         #2a446f,
         var(--clr-dark-blue)
-    );
-    justify-content: center;
-    transform: rotateY(180deg);
-    letter-spacing: 3px;
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--clr-white);
-    text-shadow: 1px 1px var(--clr-dark-blue), -1px -1px var(--clr-grayish-blue);
-    line-height: 2;
-}
-.card:hover .card__side--front { transform: rotateY(-180deg);}
-.card:hover .card__side--back { transform: rotateY(0deg);}
+        );
+        justify-content: center;
+        transform: rotateY(180deg);
+        letter-spacing: 3px;
+        font-size: 1.2rem;
+        text-align: center;
+        color: var(--clr-white);
+        text-shadow: 1px 1px var(--clr-dark-blue), -1px -1px var(--clr-grayish-blue);
+        line-height: 2;
+    }
+    .card:hover .card__side--front { transform: rotateY(-180deg);}
+    .card:hover .card__side--back { transform: rotateY(0deg);}
 @media (hover: none) {
-    .card:focus .card__side--front { transform: rotateY(-180deg);}
-    .card:focus .card__side--back { transform: rotateY(0deg);}
+    .card__side--front {
+        z-index: 1;
+    }
+    .card__side--back {
+        z-index: -1;
+    }
+    .card:focus .card__side--front {
+        z-index: -1;
+        transform: rotateY(-180deg);
+    }
+    .card:focus .card__side--back {
+        z-index: 1;
+        transform: rotateY(0deg);
+    }
 }
